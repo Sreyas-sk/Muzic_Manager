@@ -56,8 +56,7 @@ elif arg.file_name=="D":
 def intro () :
     print("########################################################")
     print("# Muzic Manager")
-    print("# Current Version : 3.2.2")  
-    print("# Author : Sreyas S")   
+    print("# Current Version : 3.2.2")     
     print("########################################################")
     return 0
 
@@ -136,6 +135,9 @@ def download_link(link,file_name,name=''):
         song_collection[letter+new_key]["Hash"]="[#]"
         song_collection[letter+new_key]["Name"]=name
         song_collection[letter+new_key]["URL"]=link
+        song_collection[letter+new_key]["Cover"]=""
+        song_collection[letter+new_key]["Format"]="m4a"
+        song_collection[letter+new_key]["Modified"]=time.ctime(time.time())
     
         song_data = open(file_name[0],"w+")
         song_data.write(json.dumps(song_collection,indent=4))
@@ -208,6 +210,8 @@ if __name__=='__main__':                            # Starting of the program --
                             subprocess.run(dynamic_cmd,check=True,timeout=set_timeout)
                             console_out("\nDOWNLOADED SONG {}------{}\n".format(key,time.ctime(time.time())))
                             song_collection[key]["Hash"]="[#]"
+                            song_collection[key]["Cover"]=""
+                            song_collection[key]["Format"]="m4a"
                             song_collection[key]["Modified"]=time.ctime(time.time())
                             
                         # Download process underway
