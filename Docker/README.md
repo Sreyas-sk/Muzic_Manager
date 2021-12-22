@@ -20,7 +20,7 @@
     ```
 - `Run docker build` with the following parameters
     ````
-    docker build -t Muzic_Manager .
+    docker build -t muzic_manager .
     ````
 - The image will be created and will be available among docker images
     ```
@@ -30,7 +30,7 @@
 ## 2. RUN CONTAINER
 - Run the following command
     ```
-    docker run -it --name Muzic_Manager -v ~/music:/music Muzic_Manager
+    docker run -it --name Muzic_Manager -v ~/music:/music muzic_manager
     ```
 
 The above command gives you an interactive shell with which you can interact with the container. The container is associated with the local directory `~/music` which was created earlier.
@@ -38,6 +38,8 @@ The above command gives you an interactive shell with which you can interact wit
 ## 3. DOWNLOADING SONGS
 
 Downloading songs remains the same as is documented in the `root` folder of this repository  [Muzic_Manager](https://github.com/Sreyas-sk/Muzic_Manager).
+
+> Dont forget the initial setup after setting up the container !!!
 
 **ENVIRONMENT VARIABLE** 
 
