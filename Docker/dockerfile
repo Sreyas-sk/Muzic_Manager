@@ -14,8 +14,6 @@ RUN wget http://ftp.cn.debian.org/debian/pool/main/y/youtube-dl/youtube-dl_2021.
 
 RUN apt -y install ./youtube-dl_2021.12.17-1_all.deb
 
-ENV music="python3 /music/Muzic_Manager/Muzic_Manager.py"
-
-RUN echo "alias python='python3'" > /.bash_aliases
+COPY config.txt /root/.bashrc
 
 ENTRYPOINT ["bash"]
