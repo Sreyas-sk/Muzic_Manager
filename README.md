@@ -125,9 +125,22 @@ The above command only checks the download.JSON file and downlods any undownload
 
 ### ADDING LINKS
 
-There are two ways to add new songs to the collection.
+There are three ways to add new songs to the collection.
 
 ### METHOD I
+This is the easiest method to adding details to `.JSON` files. Use the `Append.py`  tool. Run the program and follow the instructions to add links to respective files. 
+````
+python Append.py
+````
+By default `download.JSON`  is selected.
+
+You can select specific files by passing the -F parameter
+````
+python Append.py -F H
+````
+The above command selects `hindi.JSON` to add songs
+
+### METHOD II
 
 In this method the song details are manually added to the respective JSON files in JSON format. Then `Muzic_Manager.py` is run and the song gets downloaded.
 
@@ -151,7 +164,10 @@ The songs needs to be added in the followong format in the `.JSON` files
 }
 ```
 
-### METHOD II
+>NOTE
+>Take care of the spaces and notations while manually adding details as uneven data can lead to failure during execution.
+
+### METHOD III
 
 The second method is if you dont want the hassle of writting all the details in the file. You can download a song on the fly with just the link passing the -L argument followed by the link. 
 ```
