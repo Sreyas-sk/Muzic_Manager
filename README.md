@@ -1,8 +1,11 @@
 # Muzic_Manager
 
-Muzic_Manager is a simple song manager that helps you keep all your music in  `JSON`  file. Thus in an adverse case of loosing your music collection, restoring it is jsut a command away. 
+Muzic_Manager is a simple song manager that helps you keep all your music in  `JSON`  file.Thus in an adverse case of loosing your music collection, restoring it is jsut a command away. 
 
+On a higher note this project introduces the concept of **Music as Code (MaC)**. ie you store your entire collection of songs as code (In `JSON` format)
 > NOTE : The script can only download primarily youtube songs or any link that youtube-dl supports.
+> 
+> But dont think of this as a limitation because if you think about it most of the music that you and me listen primirly comes from youtube!!
 
 ## PRE REQUISITE
 
@@ -87,7 +90,7 @@ Root Folder ( Your Folder with cloned repo )
 ## USAGE
 
 ```
-python Muzic_Manager [OPTIONS]
+python Muzic_Manager.py [OPTIONS]
 ```
 
 ### OPTIONS
@@ -194,6 +197,6 @@ With this method the song if downloaded gets added to the download.JSON ( by def
 
 ## CONCLUSION
 
-The project might look a bit tedious but when you get the hang of it its pretty simple.Hope you have a fun time setting this up and using this script.
+The project might look a bit tedious but when you get the hang of it its pretty simple.Hope you have a fun time setting this up and using the scripts.
 
-Keep track of all you muzic and keep enjoying the beats 🎶😉
+Keep track of all your muzic and keep enjoying the beats 🎶😉
