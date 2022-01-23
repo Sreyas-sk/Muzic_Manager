@@ -1,6 +1,7 @@
 # Version 3.3.0
  - Publishing the first release for the project **Muzic_Manager v3.3.0**
  - Removing python as a dependency
+ - Removing ffmpeg as a dependency
  - Converted all python scripts to standalone binaries
  - Updated README to accomodate latest changes
  - Added Append tool to add songs from CLI instead of directly editting the respective JSON files

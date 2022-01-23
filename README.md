@@ -12,16 +12,14 @@ On a higher note this project introduces the concept of **Music as Code (MaC)**.
 
 ## PRE REQUISITE :triangular_flag_on_post:
 
-- FFmpeg
+
 - Youtube-dl
+- Python 3.7+ (OPTIONAL)
+- FFmpeg (DEPRICATED) 
 
 ## SETTING UP :gear:
 
-### FFmpeg
-
-Official [FFmpeg](https://ffmpeg.org/download.html#repositories) website
-
-### Youtube-dl 
+###  Youtube-dl 
 
 For Windows
 
@@ -38,6 +36,17 @@ brew install youtube-dl
 Or
 
 Follow the official git repository [Youtube-dl](https://github.com/ytdl-org/youtube-dl)
+
+
+### FFmpeg (DEPRICATED)
+
+Official [FFmpeg](https://ffmpeg.org/download.html#repositories) website
+
+Required with older versions of this project
+
+## PYTHON :snake:
+
+Set up python if you intend to run the tool directly using scripts
 
 ## INITIAL SET UP :tv:
 
