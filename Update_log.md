@@ -1,9 +1,17 @@
+# Version 3.3.0
+ - Publishing the first release for the project **Muzic_Manager v3.3.0**
+ - Removing python as a dependency
+ - Converted all python scripts to standalone binaries
+ - Updated README to accomodate latest changes
+ - Added Append tool to add songs from CLI instead of directly editting the respective JSON files
+ - Deletion and updation features will be added in future 
 # Version 3.2.2
 - Found youtube has audio only download by passing format agument as 140 (.m4a)
 - Using -f 140 avoids the post download extracting of audio using FFmpeg
 - Handling youtube and generic links separately
 - Added properties modified-time and cover
-- CoverArt.py can be used to add cover art to the music files provided a valid path to the cover art is specified for cover property in .JSON files
+- Cover property expects a valid location to a cover art 
+- Tool to add cover art to songs will be added in future updates, for now its just a backbone laid out. 
 # Version 3.2.1
 - Shifting from CSV to JSON
 - Conversion script ToJSON.py converts the existing CSV to JSON format

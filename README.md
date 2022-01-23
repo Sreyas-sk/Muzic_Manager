@@ -1,25 +1,27 @@
 # Muzic_Manager
 
-Muzic_Manager is a simple song manager that helps you keep all your music in  `JSON`  file.Thus in an adverse case of loosing your music collection, restoring it is just a command away. 
+Muzic_Manager is a simple song manager that helps you keep all your music in `JSON` file.Thus in an adverse case of loosing your music collection, restoring it is jsut a command away.
 
 On a higher note this project introduces the concept of **Music as Code (MaC)**. ie you store your entire collection of songs as code (In `JSON` format)
-> NOTE : The script can only download primarily youtube songs or any link that youtube-dl supports.
+
+#### Check out the [Latest Updates!!](https://github.com/Sreyas-sk/Muzic_Manager/blob/master/Update_log.md)
+
+> 👀 **NOTE :** The script can only download primarily youtube songs or any link that youtube-dl supports.
 > 
-> But dont think of this as a limitation because if you think about it most of the music that you and me listen primarily comes from youtube!!
+> But dont think of this as a limitation because if you think about it most of the music that you and me listen primirly comes from youtube!! 😎
 
-## PRE REQUISITE
+## PRE REQUISITE :triangular_flag_on_post:
 
-- Python setup
 - FFmpeg
 - Youtube-dl
 
-## SETTING UP
+## SETTING UP :gear:
 
 ### FFmpeg
 
 Official [FFmpeg](https://ffmpeg.org/download.html#repositories) website
 
-### Youtube-dl
+### Youtube-dl 
 
 For Windows
 
@@ -27,7 +29,7 @@ For Windows
 
 For Mac
 
-- Download using Homebrew
+- Download using Homebrew :beer: 
 
 ```
 brew install youtube-dl
@@ -37,16 +39,21 @@ Or
 
 Follow the official git repository [Youtube-dl](https://github.com/ytdl-org/youtube-dl)
 
-## INITIAL SET UP
+## INITIAL SET UP :tv:
 
--  Clone this repo
-- Run the following command. This sets up the required files and folders
+- Download the latest release
+- Extract the downloaded zip
+- Rename the extracted folder to **Muzic_Manager**
+>:warning: **NOTE :**  Renaming is an essential step. If not done, the program breaks
+    
+- Open CLI in the folder and run the following command. This sets up the required files and folders
+    
+    ```
+    ./Muzic_Manager
+  ```
+    
 
-	```
-	python Muzic_Manager.py
-	```
-
-## FOLDER STRUCTURE
+## FOLDER STRUCTURE 
 
 This is the folder structure the initial setup creates.
 
@@ -87,16 +94,16 @@ Root Folder ( Your Folder with cloned repo )
 │  │
 ```
 
-## USAGE
+## USAGE :art:
 
 ```
-python Muzic_Manager.py [OPTIONS]
+./Muzic_Manager [OPTIONS]
 ```
 
-### OPTIONS
+### OPTIONS :game_die:
 
 ```
-$ python Muzic_Manager.py --help
+$ ./Muzic_Manager --help
 usage: Muzic_Manager.py [-h] [-F {M,H,T,W,D}] [-L LINK] [-O NAME]
 
 optional arguments:
@@ -108,46 +115,52 @@ optional arguments:
 ```
 
 By Default the script checks all the following files and tries to download all the songs which are not downloaded.
- 
- - `download.JSON`
- - `malayalam.JSON`
- - `tamil.JSON`
- - `hindi.JSON`
- - `west.JSON`
+
+- `download.JSON`
+- `malayalam.JSON`
+- `tamil.JSON`
+- `hindi.JSON`
+- `west.JSON`
 
 If you want to selectively download songs from a file the -F argument is passed follwed by the letter denoting the file
 
 ```
-python Muzic_Manager.py -F D
+./Muzic_Manager -F D
 ```
 
 The above command only checks the download.JSON file and downlods any undownloaded songs. For more info refer **OPTIONS** section
 
-> **NOTE :** 
-> All the downloaded songs have "Hash" value "[#]" and songs which are not downloaded or had error during download has "Hash" value "[ ]"
+> 💡**NOTE :**
+> All the downloaded songs have "Hash" value "\[#\]" and songs which are not downloaded or had error during download has "Hash" value "\[ \]"
 
-### ADDING LINKS
+### ADDING LINKS :link:
 
 There are three ways to add new songs to the collection.
 
-### METHOD I
-This is the easiest method to adding details to `.JSON` files. Use the `Append.py`  tool. Run the program and follow the instructions to add links to respective files. 
-````
-python Append.py
-````
-By default `download.JSON`  is selected.
+### METHOD I :white_check_mark:
+
+This is the easiest method to adding details to `.JSON` files. Use the `Append.py` tool. Run the program and follow the instructions to add links to respective files.
+
+```
+./Append
+```
+
+By default `download.JSON` is selected.
 
 You can select specific files by passing the -F parameter
-````
-python Append.py -F H
-````
+
+```
+./Append -F H
+```
+
 The above command selects `hindi.JSON` to add songs
 
-### METHOD II
+### METHOD II :ballot_box_with_check:
 
 In this method the song details are manually added to the respective JSON files in JSON format. Then `Muzic_Manager.py` is run and the song gets downloaded.
 
 The songs needs to be added in the followong format in the `.JSON` files
+
 ```
  {
     "S1": {
@@ -157,7 +170,7 @@ The songs needs to be added in the followong format in the `.JSON` files
         "Format": ".m4a",
         "cover": "{path_to_cover_picture}"
     },
-	"S2": {
+    "S2": {
         "Hash": "[ ]",
         "Name": "Song2 Name",
         "URL": "URL from Youtube",
@@ -167,35 +180,38 @@ The songs needs to be added in the followong format in the `.JSON` files
 }
 ```
 
->NOTE
->Take care of the spaces and notations while manually adding details as uneven data can lead to failure during execution.
+> NOTE
+> Take care of the spaces and notations while manually adding details as uneven data can lead to failure during execution.
 
-### METHOD III
+### METHOD III :airplane:
 
-The second method is if you dont want the hassle of writting all the details in the file. You can download a song on the fly with just the link passing the -L argument followed by the link. 
+The second method is if you dont want the hassle of writting all the details in the file. You can download a song on the fly with just the link passing the -L argument followed by the link.
+
 ```
-python Muzic_Manager.py -L <LINK>
+./Muzic_Manager -L "LINK"
 ```
 
 You can passes a name to the downloded music using the -O argument followed by the name in double quotes
 
 ```
-python Muzic_Manager.py -L <LINK> -O "NAME_OF_SONG"
+./Muzic_Manager -L "LINK" -O "NAME_OF_SONG"
 ```
 
->Here if none of the files are specified using the -F argument then the song detials are added to the default `download.JSON` file.
+> Here if none of the files are specified using the -F argument then the song detials are added to the default `download.JSON` file.
 
-With this method the song if downloaded gets added to the download.JSON ( by default ) file with all  properties.
+With this method the song if downloaded gets added to the download.JSON ( by default ) file with all properties.
 
-## UPCOMING UPDATES
+## UPCOMING UPDATES 🔥
 
-- Download all the songs again **OVERRIDE**
-- Remove extension condition for files	 [#]
-- Adding crl+C
-- Timeout process either too slow or not responding  [#]
-- Identify if the network is slow
+- Tool to add Cover Art (Extending the tool to other metadata under consideration) ❗️
+- Adding deletion and updation feature in Append tool ❗️
+- Download all the songs again **OVERRIDE** :❗️
+- Remove extension condition for files ✅
+- Adding crl+C ❗️
+- Timeout process either too slow or not responding ✅
+- Identify if the network is slow ❗️
 
-## CONCLUSION
+## CONCLUSION :checkered_flag:
 
 The project might look a bit tedious but when you get the hang of it its pretty simple.Hope you have a fun time setting this up and using the scripts.
 
