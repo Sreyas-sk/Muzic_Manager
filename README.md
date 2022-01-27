@@ -2,8 +2,6 @@
 
 Muzic_Manager is a simple song manager that helps you keep all your music in `JSON` file.Thus in an adverse case of loosing your music collection, restoring it is jsut a command away.
 
-On a higher note this project introduces the concept of **Music as Code (MaC)**. ie you store your entire collection of songs as code (In `JSON` format)
-
 #### Check out the [Latest Updates!!](https://github.com/Sreyas-sk/Muzic_Manager/blob/master/Update_log.md)
 
 > 👀 **NOTE :** The script can only download primarily youtube songs or any link that youtube-dl supports.
@@ -15,7 +13,7 @@ On a higher note this project introduces the concept of **Music as Code (MaC)**.
 
 - Youtube-dl
 - Python 3.7+ (OPTIONAL)
-- FFmpeg (DEPRICATED) 
+- FFmpeg (OPTIONAL) 
 
 ## SETTING UP :gear:
 
@@ -38,13 +36,17 @@ Or
 Follow the official git repository [Youtube-dl](https://github.com/ytdl-org/youtube-dl)
 
 
-### FFmpeg (DEPRICATED)
+### FFmpeg (OPTIONAL) :movie_camera:
 
 Official [FFmpeg](https://ffmpeg.org/download.html#repositories) website
 
-Required with older versions of this project
+FFmpeg is an open source tool to handle manipulation of audio and video files.In this project FFmpeg is used to convert downloaded files to the required audio format specified by the user. 
 
-## PYTHON :snake:
+:thought_balloon: This tool is not a requirement unless you wish to have songs in other formats like `mp3`, `FLAC` and so on...
+
+>By default the audio format is `m4a`. This format consumes less space and provides decent quality of music (128kbps) better than `mp3` format. Although most of the music players out there supports this format, its not an absolute guarantee, so its best to check with your favourite music player. 
+
+## PYTHON (OPTIONAL) :snake:
 
 Set up python if you intend to run the tool directly using scripts
 
