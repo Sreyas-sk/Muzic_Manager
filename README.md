@@ -1,5 +1,7 @@
 # Muzic_Manager
 
+TESTING BRANCHES
+
 Muzic_Manager is a simple song manager that helps you keep all your music in `JSON` file.Thus in an adverse case of loosing your music collection, restoring it is jsut a command away.
 
 #### Check out the [Latest Updates!!](https://github.com/Sreyas-sk/Muzic_Manager/blob/master/Update_log.md)
