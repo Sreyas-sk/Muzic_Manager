@@ -23,7 +23,7 @@ elif arg.file_name == "H":
     arg.file_name = files[1]
 elif arg.file_name == "w":
     arg.file_name = files[3]
-elif arg.file_name == "d":
+elif arg.file_name == "D":
     arg.file_name = files[3]
 elif arg.file_name == "T":
     arg.file_name = files[4]
@@ -32,7 +32,7 @@ elif arg.file_name == "T":
 def intro () :
     print("########################################################")
     print("# Muzic Manager Append Tool")
-    print("# Current Version : 1.0")     
+    print("# Current Version : 1.1")     
     print("########################################################")
     return 0
 
