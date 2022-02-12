@@ -1,3 +1,8 @@
+# Version 3.4.0
+- Feature update: **--over-ride** to download all the songs ignoring the hash condition
+- Feature update: **--over-ride-format** to force change the format of songs being downloaded.
+- Feature update **--destination** to download song to specific location 
+- Code optimization : Improved code reusability
 # Version 3.3.0
  - Publishing the first release for the project **Muzic_Manager v3.3.0**
  - Making python as a dependency optional
